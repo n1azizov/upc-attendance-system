@@ -1,7 +1,8 @@
 # 📚 Attendance Management System
 
 A simple and lightweight Django application for managing student attendance in small classes.
-Designed for teachers to easily create sessions, mark absences, and track attendance records.
+Originally made for UFAZ Programming Club.
+Designed for teachers or instructors to easily create sessions, mark absences, and track attendance records.
 
 ---
 
@@ -25,32 +26,41 @@ Designed for teachers to easily create sessions, mark absences, and track attend
 
 Check your Python version:
 
+```
 python --version
-
+```
 ---
 
 ### 2. Installation
 
 #### Clone the repository
 
+```
 git clone <your-repository-link>
 cd upc_absence
+```
 
 #### Create virtual environment
 
 Windows:
 
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
 Mac / Linux:
 
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 #### Install dependencies
 
+```
 pip install -r requirements.txt
+```
 
 ---
 
@@ -58,19 +68,25 @@ pip install -r requirements.txt
 
 Run migrations:
 
+```
 python manage.py makemigrations
 
 python manage.py migrate
+```
 
 Create admin user:
 
+```
 python manage.py createsuperuser
+```
 
 ---
 
 ### 4. Run the Application
 
+```
 python manage.py runserver
+```
 
 Open in browser:
 
@@ -93,22 +109,12 @@ Admin panel: http://127.0.0.1:8000/admin
 
 ## 📁 Project Structure
 
+```
 attendance/     – main application logic  
 templates/      – admin custom templates  
 upcabsence/     – project configuration  
 manage.py       – Django entry point  
-
----
-
-## ⚠️ Common Issues
-
-Migration error:
-
-python manage.py migrate
-
-Port already in use:
-
-python manage.py runserver 8001
+```
 
 ---
 
@@ -122,7 +128,7 @@ This project is licensed under the MIT License.
 **Nadir Azizov**<br>
 n.azizov@ufaz.az<br>
 nadirabulfazazizov@gmail.com<br>
-UFAZ — FEWP Project (2025)<br>
+UPC Attendance System made for UFAZ Programming Club
 
 ---
 
