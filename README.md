@@ -1,8 +1,6 @@
 # 📚 Attendance Management System
 
-A simple and lightweight Django application for managing student attendance in small classes.
-Originally made for UFAZ Programming Club.
-Designed for teachers or instructors to easily create sessions, mark absences, and track attendance records.
+A simple and lightweight Django application for managing student attendance in small classes. Originally developed for the UFAZ Programming Club, it enables instructors to easily create sessions, mark absences, and track attendance records.
 
 ---
 
