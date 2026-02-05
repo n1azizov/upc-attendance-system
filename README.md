@@ -34,7 +34,7 @@ python --version
 #### Clone the repository
 
 ```
-git clone <your-repository-link>
+git clone https://github.com/n1azizov/upc-attendance-system
 cd upc_absence
 ```
 
