@@ -89,7 +89,7 @@ python manage.py runserver
 Open in browser:
 http://127.0.0.1:8000  
 
-Note: These instructions are for running the application on a local server. For deployment, follow Django production guidelines and configure environment variables, security settings, and a production server.
+Note These instructions are for running the application on a local server. For deployment, follow Django production guidelines and configure environment variables, security settings, and a production server.
 ---
 
 ## 🧑‍🏫 Usage
