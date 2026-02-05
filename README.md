@@ -35,7 +35,7 @@ python --version
 
 ```
 git clone https://github.com/n1azizov/upc-attendance-system
-cd upc_absence
+cd upc-attendance-system
 ```
 
 #### Create virtual environment
