@@ -54,6 +54,16 @@ class SessionAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return request.user.is_superuser
 
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name == "absents":
+            obj_id = request.resolver_match.kwargs.get('object_id')
+
+            if obj_id:
+                session = Session.objects.get(id=obj_id)
+                kwargs["queryset"] = session.group.students.all()
+
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
+
 
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('name', 'instructor')
