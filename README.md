@@ -122,7 +122,7 @@ This project is licensed under the MIT License.
 ---
 
 ## 🧑‍💻 Author
-**Nadir Azizov**<br>
+[**Nadir Azizov**<br>](https://www.linkedin.com/in/n1azizov/)
 n.azizov@ufaz.az<br>
 nadirabulfazazizov@gmail.com<br>
 UPC Attendance System made for UFAZ Programming Club
