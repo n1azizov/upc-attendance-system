@@ -27,10 +27,9 @@ class StudentAdmin(admin.ModelAdmin):
 class SessionAdmin(admin.ModelAdmin):
     list_display = ('group', 'date')
 
-    # This gives the left → right selector
     filter_horizontal = ('absents',)
 
-    # --- restrict what instructor sees ---
+    # restrict what instructor sees
     def get_queryset(self, request):
         qs = super().get_queryset(request)
 
@@ -39,7 +38,7 @@ class SessionAdmin(admin.ModelAdmin):
 
         return qs.filter(group__instructor__user=request.user)
 
-    # --- LOCK fields ---
+    # lock fields
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
@@ -47,7 +46,7 @@ class SessionAdmin(admin.ModelAdmin):
         # instructor cannot change these
         return ['group', 'date']
 
-    # --- block add/delete ---
+    # block add/delete
     def has_add_permission(self, request):
         return request.user.is_superuser
 
@@ -131,20 +130,6 @@ class GroupAdmin(admin.ModelAdmin):
             self.message_user(request, "Students imported successfully!")
 
             return redirect(f"/admin/attendance/group/{group_id}/change/")
-
-        return render(request, "admin/import.html")
-
-
-
-
-    def import_view(self, request, group_id):
-        if request.method == "POST":
-            file = request.FILES['file']
-            import_students_from_xlsx(file, group_id)
-
-            self.message_user(request, "Students imported successfully!")
-
-            return redirect("/admin/attendance/student/")
 
         return render(request, "admin/import.html")
 
