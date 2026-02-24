@@ -9,7 +9,8 @@ def import_students_from_xlsx(file, group_id):
     for _, row in df.iterrows():
         student, created = Student.objects.get_or_create(
             first_name=row['name'],
-            last_name=row['surname']
+            last_name=row['surname'],
+            phone=row.get("phone") or None,
         )
 
         student.groups.add(group)
