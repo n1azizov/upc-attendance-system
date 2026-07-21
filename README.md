@@ -124,7 +124,7 @@ This project is licensed under the GPLv3 License.
 ## 🧑‍💻 Author
 [**Nadir Azizov**<br>](https://www.linkedin.com/in/n1azizov/)
 n.azizov@ufaz.az<br>
-nadirabulfazazizov@gmail.com<br>
+itsnadirazizov@gmail.com<br>
 UPC Attendance System made for UFAZ Programming Club
 
 ---
